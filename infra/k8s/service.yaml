@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435-srv
+spec:
+  selector:
+    app: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9022
+  type: ClusterIP

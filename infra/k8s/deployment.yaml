@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435-depl
+  labels:
+    app: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435
+  template:
+    metadata:
+      labels:
+        app: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435
+    spec:
+      containers:
+        - name: tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:tiny-bar--coll-0aaf5d5dad394ef9b8ca7a32d3db3435
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9022
